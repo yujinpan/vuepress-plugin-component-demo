@@ -3,10 +3,10 @@ import fs from 'fs';
 import glob from 'glob';
 import path from 'path';
 
-const vuepressPluginComponentDemo = {
+const vuepressPluginComponentDemo = (options = {}, ctx) => ({
   clientDynamicModules() {
     const CODES = glob
-      .sync(path.resolve(__dirname, './components/*.vue'))
+      .sync(path.resolve(ctx.sourceDir, './.vuepress/components/*.vue'))
       .reduce((prev, next) => {
         const name = path.basename(next, path.extname(next));
         const content = fs.readFileSync(next).toString();
@@ -24,6 +24,6 @@ const vuepressPluginComponentDemo = {
     };
   },
   enhanceAppFiles: [path.resolve(__dirname, `./enhanceAppFile.js`)],
-};
+});
 
 export default vuepressPluginComponentDemo;
