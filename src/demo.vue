@@ -4,7 +4,7 @@
     <component :is="name" />
     <details class="custom-block details">
       <summary>Click me to show code</summary>
-      <p v-html="code"></p>
+      <div class="language-vue extra-class" v-html="code"></div>
     </details>
 
   </div>
