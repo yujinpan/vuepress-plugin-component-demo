@@ -41,10 +41,6 @@ description...
 ## Function1
 
 <demo name="function1" />
-
-## Function2
-
-<demo name="function2" />
 ```
 
 Result

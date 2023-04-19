@@ -23,15 +23,15 @@
     "publish:patch": "npm version patch && npm publish",
     "version": "npm run build",
     "postversion": "git push --all && git push --tags",
-    "build": "rollupx"
+    "build": "rollupx",
+    "docs:dev": "npm run build && vuepress dev .",
+    "docs:build": "npm run build &&vuepress build ."
   },
   "author": "yujinpan",
   "devDependencies": {
     "@types/node": "^18.7.23",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
-    "@vuepress/core": "^1.9.9",
-    "@vuepress/markdown": "^1.9.9",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.1",
@@ -40,7 +40,8 @@
     "glob": "^10.1.0",
     "prettier": "^2.7.1",
     "rollupx": "^3.1.1",
-    "typescript": "^4.8.3"
+    "typescript": "^4.8.3",
+    "vuepress": "^1.9.9"
   },
   "bugs": {
     "url": "https://github.com/yujinpan/vuepress-plugin-component-demo/issues"

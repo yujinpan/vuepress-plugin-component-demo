@@ -6,7 +6,6 @@
       <summary>Click me to show code</summary>
       <div class="language-vue extra-class" v-html="code"></div>
     </details>
-
   </div>
 </template>
 
@@ -22,7 +21,7 @@ export default {
     },
     color: {
       type: String,
-      default: 'gray',
+      default: '#eaecef',
     },
   },
   computed: {
@@ -32,3 +31,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.demo.custom-block {
+  border: 1px solid #eaecef;
+  border-radius: 6px;
+  background: none;
+}
+</style>
