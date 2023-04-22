@@ -25,7 +25,7 @@
     "postversion": "git push --all && git push --tags",
     "build": "rollupx",
     "docs:dev": "npm run build && vuepress dev .",
-    "docs:build": "npm run build &&vuepress build ."
+    "docs:build": "npm run build && vuepress build ."
   },
   "author": "yujinpan",
   "devDependencies": {
