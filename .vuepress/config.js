@@ -10,4 +10,5 @@ module.exports = {
     sidebar: 'auto',
     nav: [{ text: 'Guide', link: '/' }],
   },
+  patterns: ['README.md'],
 };
