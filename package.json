@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-component-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vuepress component demo block in markdown.",
   "main": "lib/cjs/index.js",
   "module": "lib/es/index.js",
