@@ -6,9 +6,13 @@ import path from 'path';
 const vuepressPluginComponentDemo = (options = {}, ctx) => ({
   clientDynamicModules() {
     const CODES = glob
-      .sync(path.resolve(ctx.sourceDir, './.vuepress/components/*.vue'))
+      .sync(path.resolve(ctx.sourceDir, './.vuepress/components/**/*.vue'))
       .reduce((prev, next) => {
-        const name = path.basename(next, path.extname(next));
+        const relative = path.relative(
+          path.resolve(ctx.sourceDir, './.vuepress/components'),
+          next,
+        );
+        const name = relative.slice(0, -path.extname(relative).length);
         const content = fs.readFileSync(next).toString();
         const code = highlight(content, 'vue');
 

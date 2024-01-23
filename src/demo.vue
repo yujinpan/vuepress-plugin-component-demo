@@ -1,7 +1,7 @@
 <template>
   <div class="demo custom-block tip" :style="{ borderColor: color }">
     <p>{{ title }}</p>
-    <component :is="name" />
+    <component :is="name.replace('/', '-')" />
     <details class="custom-block details">
       <summary>Click me to show code</summary>
       <div class="language-vue extra-class" v-html="code"></div>
